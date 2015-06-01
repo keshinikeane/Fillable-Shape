@@ -1,0 +1,67 @@
+Lab8: Polymorphism and inheritance
+===
+  
+Download and unzip the files in lab8.zip, and put them 
+into a new lab8 package inside your labs project in 
+Eclipse.
+  
+When you have completed this assignment, zip up your 
+*annotated* ShapePanel.java along with your new files
+FillableShape.java, Circle.java and Triangle.java,
+and submit via Blackboard.
+  
+---
+In a file FillableShape.java define a new interface
+with the following methods:
+public boolean contains(int x, int y);
+  returns true if point (x,y) is inside the shape
+public void draw(Graphics g);
+  draws this shape in the specified graphics context
+public double getArea()
+  returns the area of this shape
+public double getPerimeter()
+  returns the length of the perimeter of this shape
+public boolean isFilled();
+  returns true, if this shape is filled; false, otherwise.
+public void setFilled(boolean filled);
+  sets the state of this shape to filled or not filled.
+  
+---
+In a file Circle.java, define a new class Circle that
+implements the interface FillableShape. When you have 
+completed your class, uncomment the statements in 
+ShapePanel.java that add Circles to your ShapePanel 
+and test by running the ShapePanel program.
+  
+---
+In a file Triangle.java, define a new class Triangle that 
+extends the class Polygon in the standard package java.awt 
+*and* that implements the interface FillableShape. Where
+possible, use the methods provided by the base class 
+Polygon to implement the interface FillableShape. Note
+that the methods contains and draw will be extremely
+easy to implement. Because a Triangle *IS A* Polygon,
+you can write statements like g.drawPolygon(this)!
+Also, as a derived class, you have access to protected
+fields like xpoints and ypoints in the class Polygon.
+  
+When you have completed your Triangle.java, uncomment
+the statement in ShapePanel.java that adds a Triangle,
+and test by running the ShapePanel program.
+  
+To check your code, you may want to add an additional
+Triangle to the ShapePanel, one for which you *know*
+the correct area and perimeter.
+  
+---
+When your ShapePanel program works correctly, study 
+carefully the comments in ShapePanel.java. Note that 
+you must annotate with comments each statement in two 
+methods inside this file. 
+  
+Hint: throughout this lab, you should use the standard 
+Java documentation to learn about various methods and 
+fields that you will use to complete this assignment. 
+Note that some methods are inherited from base classes, 
+and that the Java documentation makes it easy walk up 
+and down the inheritance tree.
